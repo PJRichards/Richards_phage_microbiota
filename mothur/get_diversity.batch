@@ -1,0 +1,20 @@
+set.dir(input=data/mothur, output=data/mothur, seed=20122016)
+get.groups(shared=phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.shared, groups=ca_cmp_d1_1-ca_cmp_d1_2-ca_cmp_d1_3-ca_cmp_d1_4-ca_cmp_d1_5-ca_cmp_d2_1-ca_cmp_d2_2-ca_cmp_d2_3-ca_cmp_d2_4-ca_cmp_d2_5-ca_cmp_d3_1-ca_cmp_d3_2-ca_cmp_d3_3-ca_cmp_d3_4-ca_cmp_d3_5-ca_cmp_d4_1-ca_cmp_d4_2-ca_cmp_d4_3-ca_cmp_d4_4-ca_cmp_d4_5-ca_cmp_d5_1-ca_cmp_d5_2-ca_cmp_d5_3-ca_cmp_d5_4-ca_cmpphg_d1_1-ca_cmpphg_d1_2-ca_cmpphg_d1_3-ca_cmpphg_d1_4-ca_cmpphg_d1_5-ca_cmpphg_d2_1-ca_cmpphg_d2_2-ca_cmpphg_d2_3-ca_cmpphg_d2_4-ca_cmpphg_d2_5-ca_cmpphg_d3_1-ca_cmpphg_d3_2-ca_cmpphg_d3_3-ca_cmpphg_d3_4-ca_cmpphg_d3_5-ca_cmpphg_d4_1-ca_cmpphg_d4_2-ca_cmpphg_d4_3-ca_cmpphg_d4_4-ca_cmpphg_d4_5-ca_cmpphg_d5_1-ca_cmpphg_d5_2-ca_cmpphg_d5_3-ca_cmpphg_d5_4-ca_cmpphg_d5_5-ca_ctl_d5_1-ca_ctl_d5_2-ca_ctl_d5_3)
+system(mv data/mothur/phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.0.03.pick.shared data/mothur/phage_ecol.0.03.ceca_exp.shared)
+#count.groups(shared=data/mothur/phage_ecol.0.03.ceca_exp.shared)
+dist.shared(shared=phage_ecol.0.03.ceca_exp.shared, calc=thetayc-braycurtis, subsample=T)
+amova(phylip=phage_ecol.0.03.ceca_exp.braycurtis.0.03.lt.dist, design=data/references/ceca.design)
+pcoa(phylip=phage_ecol.0.03.ceca_exp.braycurtis.0.03.lt.dist)
+#nmds(phylip=phage_ecol.0.03.ceca.exp.braycurtis.0.03.lt.dist)
+#homova(phylip=phage_ecol.0.03.ceca_exp.braycurtis.0.03.lt.d1.dist, design=data/references/ceca_1dpt.design)
+
+
+get.groups(shared=phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.shared, groups=il_cmp_d2_1-il_cmp_d2_2-il_cmp_d2_3-il_cmp_d2_4-il_cmp_d2_5-il_cmp_d3_1-il_cmp_d3_2-il_cmp_d3_3-il_cmp_d3_4-il_cmp_d3_5-il_cmp_d4_1-il_cmp_d4_2-il_cmp_d4_3-il_cmp_d4_4-il_cmp_d4_5-il_cmp_d5_1-il_cmp_d5_2-il_cmp_d5_3-il_cmp_d5_4-il_cmp_d5_5-il_cmpphg_d2_1-il_cmpphg_d2_2-il_cmpphg_d2_3-il_cmpphg_d2_4-il_cmpphg_d2_5-il_cmpphg_d3_1-il_cmpphg_d3_2-il_cmpphg_d3_3-il_cmpphg_d3_4-il_cmpphg_d3_5-il_cmpphg_d4_1-il_cmpphg_d4_2-il_cmpphg_d4_3-il_cmpphg_d4_4-il_cmpphg_d4_5-il_cmpphg_d5_1-il_cmpphg_d5_2-il_cmpphg_d5_3-il_cmpphg_d5_4-il_cmpphg_d5_5-il_ctl_d5_1-il_ctl_d5_2-il_ctl_d5_3-il_ctl_d5_4)
+system(mv data/mothur/phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.0.03.pick.shared data/mothur/phage_ecol.0.03.il_exp.shared)
+count.groups(shared=data/mothur/phage_ecol.0.03.il_exp.shared)
+
+dist.shared(shared=phage_ecol.0.03.il_exp.shared, calc=thetayc-braycurtis, subsample=1292)
+#omit il_cmp_d2_2 contains812
+
+amova(phylip=phage_ecol.0.03.il_exp.braycurtis.0.03.lt.dist, design=data/references/ileum.design)
+pcoa(phylip=phage_ecol.0.03.il_exp.braycurtis.0.03.lt.dist)

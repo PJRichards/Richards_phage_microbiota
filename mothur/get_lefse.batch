@@ -1,0 +1,127 @@
+set.dir(input=data/mothur, output=data/mothur, seed=20122016)
+
+## caeca ##
+
+# d1
+get.groups(shared=phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.shared, groups=ca_cmp_d1_1-ca_cmp_d1_2-ca_cmp_d1_3-ca_cmp_d1_4-ca_cmp_d1_5-ca_cmpphg_d1_1-ca_cmpphg_d1_2-ca_cmpphg_d1_3-ca_cmpphg_d1_4-ca_cmpphg_d1_5)
+system(mv data/mothur/phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.0.03.pick.shared data/mothur/phage_ecol.caec_d1.shared)
+filter.shared(shared=phage_ecol.caec_d1.shared, minpercent=1)
+count.groups(shared=data/mothur/phage_ecol.caec_d1.0.03.filter.shared)
+sub.sample(shared=phage_ecol.caec_d1.0.03.filter.shared, size=4255)
+lefse(shared=phage_ecol.caec_d1.0.03.filter.0.03.subsample.shared, design=data/references/ceca_1dpt.design, iters=1000)
+
+# d2
+get.groups(shared=phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.shared, groups=ca_cmp_d2_5-ca_cmp_d2_1-ca_cmp_d2_3-ca_cmp_d2_2-ca_cmp_d2_4-ca_cmpphg_d2_5-ca_cmpphg_d2_1-ca_cmpphg_d2_4-ca_cmpphg_d2_3-ca_cmpphg_d2_2)
+system(mv data/mothur/phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.0.03.pick.shared data/mothur/phage_ecol.caec_d2.shared)
+filter.shared(shared=phage_ecol.caec_d2.shared, minpercent=1)
+count.groups(shared=phage_ecol.caec_d2.0.03.filter.shared)
+sub.sample(shared=phage_ecol.caec_d2.0.03.filter.shared, size=28780)
+lefse(shared=phage_ecol.caec_d2.0.03.filter.0.03.subsample.shared, design=data/references/ceca_2dpt.design, iters=1000)
+
+# d3
+get.groups(shared=phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.shared, groups=ca_cmp_d3_2-ca_cmp_d3_3-ca_cmp_d3_5-ca_cmp_d3_1-ca_cmp_d3_4-ca_cmpphg_d3_5-ca_cmpphg_d3_4-ca_cmpphg_d3_1-ca_cmpphg_d3_2-ca_cmpphg_d3_3)
+system(mv data/mothur/phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.0.03.pick.shared data/mothur/phage_ecol.caec_d3.shared)
+filter.shared(shared=phage_ecol.caec_d3.shared, minpercent=1)
+count.groups(shared=phage_ecol.caec_d3.0.03.filter.shared)
+sub.sample(shared=phage_ecol.caec_d3.0.03.filter.shared, size=32364)
+lefse(shared=phage_ecol.caec_d3.0.03.filter.0.03.subsample.shared, design=data/references/ceca_3dpt.design, iters=1000)
+
+# d4
+get.groups(shared=phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.shared, groups=ca_cmp_d4_4-ca_cmp_d4_5-ca_cmp_d4_3-ca_cmp_d4_2-ca_cmp_d4_1-ca_cmpphg_d4_3-ca_cmpphg_d4_1-ca_cmpphg_d4_4-ca_cmpphg_d4_5-ca_cmpphg_d4_2)
+system(mv data/mothur/phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.0.03.pick.shared data/mothur/phage_ecol.caec_d4.shared)
+filter.shared(shared=phage_ecol.caec_d4.shared, minpercent=1)
+count.groups(shared=phage_ecol.caec_d4.0.03.filter.shared)
+sub.sample(shared=phage_ecol.caec_d4.0.03.filter.shared, size=17415)
+lefse(shared=phage_ecol.caec_d4.0.03.filter.0.03.subsample.shared, design=data/references/ceca_4dpt.design, iters=1000)
+
+# d5
+get.groups(shared=phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.shared, groups=ca_cmp_d5_2-ca_cmp_d5_3-ca_cmp_d5_1-ca_cmp_d5_4-ca_cmpphg_d5_1-ca_cmpphg_d5_5-ca_cmpphg_d5_3-ca_cmpphg_d5_4-ca_cmpphg_d5_2)
+system(mv data/mothur/phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.0.03.pick.shared data/mothur/phage_ecol.caec_d5.shared)
+filter.shared(shared=phage_ecol.caec_d5.shared, minpercent=1)
+count.groups(shared=phage_ecol.caec_d5.0.03.filter.shared)
+sub.sample(shared=phage_ecol.caec_d5.0.03.filter.shared, size=31129)
+lefse(shared=phage_ecol.caec_d5.0.03.filter.0.03.subsample.shared, design=data/references/ceca_5dpt.design, iters=1000)
+
+# d5 all
+get.groups(shared=phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.shared, groups=ca_cmp_d5_2-ca_cmp_d5_3-ca_cmp_d5_1-ca_cmp_d5_4-ca_ctl_d5_1-ca_ctl_d5_3-ca_ctl_d5_2-ca_cmpphg_d5_1-ca_cmpphg_d5_5-ca_cmpphg_d5_3-ca_cmpphg_d5_4-ca_cmpphg_d5_2)
+system(mv data/mothur/phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.0.03.pick.shared data/mothur/phage_ecol.caec_d5_all.shared)
+filter.shared(shared=phage_ecol.caec_d5_all.shared, minpercent=1)
+count.groups(shared=phage_ecol.caec_d5_all.0.03.filter.shared)
+sub.sample(shared=phage_ecol.caec_d5_all.0.03.filter.shared, size=27712)
+lefse(shared=phage_ecol.caec_d5_all.0.03.filter.0.03.subsample.shared, design=data/references/ceca_5dpi_ctl.design, iters=1000)
+
+# d5 ctl vs cmp
+get.groups(shared=phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.shared, groups=ca_cmp_d5_1-ca_cmp_d5_2-ca_cmp_d5_3-ca_cmp_d5_4-ca_ctl_d5_1-ca_ctl_d5_2-ca_ctl_d5_3)
+system(mv data/mothur/phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.0.03.pick.shared data/mothur/phage_ecol.caec_d5_cmp.shared)
+filter.shared(shared=phage_ecol.caec_d5_cmp.shared, minpercent=1)
+count.groups(shared=phage_ecol.caec_d5_cmp.0.03.filter.shared)
+sub.sample(shared=phage_ecol.caec_d5_cmp.0.03.filter.shared, size=27712)
+lefse(shared=phage_ecol.caec_d5_cmp.0.03.filter.0.03.subsample.shared, design=data/references/ceca_5dpi_ctl.design, iters=1000)
+
+# d5 ctl vs cmpphg
+get.groups(shared=phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.shared, groups=ca_ctl_d5_1-ca_ctl_d5_3-ca_ctl_d5_2-ca_cmpphg_d5_1-ca_cmpphg_d5_5-ca_cmpphg_d5_3-ca_cmpphg_d5_4-ca_cmpphg_d5_2)
+system(mv data/mothur/phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.0.03.pick.shared data/mothur/phage_ecol.caec_d5_cmpphg.shared)
+filter.shared(shared=phage_ecol.caec_d5_cmpphg.shared, minpercent=1)
+count.groups(shared=phage_ecol.caec_d5_cmpphg.0.03.filter.shared)
+sub.sample(shared=phage_ecol.caec_d5_cmpphg.0.03.filter.shared, size=27712)
+lefse(shared=phage_ecol.caec_d5_cmpphg.0.03.filter.0.03.subsample.shared, design=data/references/ceca_5dpi_ctl.design, iters=1000)
+
+
+
+## ileum ##
+
+# d2
+get.groups(shared=phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.shared, groups=il_cmp_d2_1-il_cmp_d2_3-il_cmp_d2_4-il_cmp_d2_5-il_cmpphg_d2_1-il_cmpphg_d2_2-il_cmpphg_d2_3-il_cmpphg_d2_4-il_cmpphg_d2_5)
+system(mv data/mothur/phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.0.03.pick.shared data/mothur/phage_ecol.ileum_d2.shared)
+filter.shared(shared=phage_ecol.ileum_d2.shared, minpercent=1)
+count.groups(shared=phage_ecol.ileum_d2.0.03.filter.shared)
+sub.sample(shared=phage_ecol.ileum_d2.0.03.filter.shared, size=21769)
+lefse(shared=phage_ecol.ileum_d2.0.03.filter.0.03.subsample.shared, design=data/references/ileum_2dpt.design, iters=1000)
+
+# d3
+get.groups(shared=phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.shared, groups=il_cmp_d3_1-il_cmp_d3_2-il_cmp_d3_3-il_cmp_d3_4-il_cmp_d3_5-il_cmpphg_d3_1-il_cmpphg_d3_2-il_cmpphg_d3_3-il_cmpphg_d3_4-il_cmpphg_d3_5)
+system(mv data/mothur/phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.0.03.pick.shared data/mothur/phage_ecol.ileum_d3.shared)
+filter.shared(shared=phage_ecol.ileum_d3.shared, minpercent=1)
+count.groups(shared=phage_ecol.ileum_d3.0.03.filter.shared)
+sub.sample(shared=phage_ecol.ileum_d3.0.03.filter.shared, size=3718)
+lefse(shared=phage_ecol.ileum_d3.0.03.filter.0.03.subsample.shared, design=data/references/ileum_3dpt.design, iters=1000)
+
+# d4
+get.groups(shared=phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.shared, groups=il_cmp_d4_1-il_cmp_d4_2-il_cmp_d4_3-il_cmp_d4_4-il_cmp_d4_5-il_cmpphg_d4_1-il_cmpphg_d4_2-il_cmpphg_d4_4-il_cmpphg_d4_5)
+system(mv data/mothur/phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.0.03.pick.shared data/mothur/phage_ecol.ileum_d4.shared)
+filter.shared(shared=phage_ecol.ileum_d4.shared, minpercent=1)
+count.groups(shared=phage_ecol.ileum_d4.0.03.filter.shared)
+sub.sample(shared=phage_ecol.ileum_d4.0.03.filter.shared, size=3749)
+lefse(shared=phage_ecol.ileum_d4.0.03.filter.0.03.subsample.shared, design=data/references/ileum_4dpt.design, iters=1000)
+
+# d5
+get.groups(shared=phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.shared, groups=il_cmp_d5_1-il_cmp_d5_2-il_cmp_d5_3-il_cmp_d5_4-il_cmp_d5_5-il_cmpphg_d5_1-il_cmpphg_d5_2-il_cmpphg_d5_3-il_cmpphg_d5_4-il_cmpphg_d5_5)
+system(mv data/mothur/phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.0.03.pick.shared data/mothur/phage_ecol.ileum_d5.shared)
+filter.shared(shared=phage_ecol.ileum_d5.shared, minpercent=1)
+count.groups(shared=phage_ecol.ileum_d5.0.03.filter.shared)
+sub.sample(shared=phage_ecol.ileum_d5.0.03.filter.shared, size=4308)
+lefse(shared=phage_ecol.ileum_d5.0.03.filter.0.03.subsample.shared, design=data/references/ileum_5dpt.design, iters=1000)
+
+# d5 all
+get.groups(shared=phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.shared, groups=il_cmp_d5_1-il_cmp_d5_2-il_cmp_d5_3-il_cmp_d5_4-il_cmp_d5_5-il_cmpphg_d5_1-il_cmpphg_d5_2-il_cmpphg_d5_3-il_cmpphg_d5_4-il_cmpphg_d5_5-il_ctl_d5_1-il_ctl_d5_2-il_ctl_d5_3-il_ctl_d5_4)
+system(mv data/mothur/phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.0.03.pick.shared data/mothur/phage_ecol.ileum_d5_all.shared)
+filter.shared(shared=phage_ecol.ileum_d5_all.shared, minpercent=1)
+count.groups(shared=phage_ecol.ileum_d5_all.0.03.filter.shared)
+sub.sample(shared=phage_ecol.ileum_d5_all.0.03.filter.shared, size=4308)
+lefse(shared=phage_ecol.ileum_d5_all.0.03.filter.0.03.subsample.shared, design=data/references/ileum_5dpt_ctl.design, iters=1000)
+
+# d5 ctl vs cmp
+get.groups(shared=phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.shared, groups=il_cmp_d5_1-il_cmp_d5_2-il_cmp_d5_3-il_cmp_d5_4-il_cmp_d5_5-il_ctl_d5_1-il_ctl_d5_2-il_ctl_d5_3-il_ctl_d5_4)
+system(mv data/mothur/phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.0.03.pick.shared data/mothur/phage_ecol.ileum_d5_cmp.shared)
+filter.shared(shared=phage_ecol.ileum_d5_cmp.shared, minpercent=1)
+count.groups(shared=phage_ecol.ileum_d5_cmp.0.03.filter.shared)
+sub.sample(shared=phage_ecol.ileum_d5_cmp.0.03.filter.shared, size=32841)
+lefse(shared=phage_ecol.ileum_d5_cmp.0.03.filter.0.03.subsample.shared, design=data/references/ileum_5dpt_ctl.design, iters=1000)
+
+# d5 ctl vs cmpphg
+get.groups(shared=phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.shared, groups=il_cmpphg_d5_1-il_cmpphg_d5_2-il_cmpphg_d5_3-il_cmpphg_d5_4-il_cmpphg_d5_5-il_ctl_d5_1-il_ctl_d5_2-il_ctl_d5_3-il_ctl_d5_4)
+system(mv data/mothur/phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.0.03.pick.shared data/mothur/phage_ecol.ileum_d5_cmpphg.shared)
+filter.shared(shared=phage_ecol.ileum_d5_cmpphg.shared, minpercent=1)
+count.groups(shared=phage_ecol.ileum_d5_cmpphg.0.03.filter.shared)
+sub.sample(shared=phage_ecol.ileum_d5_cmpphg.0.03.filter.shared, size=4308)
+lefse(shared=phage_ecol.ileum_d5_cmpphg.0.03.filter.0.03.subsample.shared, design=data/references/ileum_5dpt_ctl.design, iters=1000)
