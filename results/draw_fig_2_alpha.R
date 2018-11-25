@@ -27,7 +27,7 @@ alpha.meta$host_age <- as.numeric(alpha.meta$host_age)
 alpha.meta$dpi <- as.factor(alpha.meta$host_age-20)
 
 # add group
-alpha.meta$group2 <- as.factor(ifelse(alpha.meta$chem_administration=="none", "Cj", "Cj_phg"))
+alpha.meta$group2 <- as.factor(ifelse(alpha.meta$chem_administration=="mock", "Cj", "Cj_phg"))
 # subset
 alpha.meta.caeca <- alpha.meta[alpha.meta$`*env_feature`=="CAECUM",]
 alpha.meta.ileum <- alpha.meta[alpha.meta$`*env_feature`=="ILEUM",]
