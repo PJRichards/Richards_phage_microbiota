@@ -13,8 +13,9 @@ get.groups(shared=phage_ecol.good.unique.good.filter.unique.precluster.pick.pick
 system(mv data/mothur/phage_ecol.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.unique_list.0.03.pick.shared data/mothur/phage_ecol.0.03.il_exp.shared)
 count.groups(shared=data/mothur/phage_ecol.0.03.il_exp.shared)
 
-dist.shared(shared=phage_ecol.0.03.il_exp.shared, calc=thetayc-braycurtis, subsample=1292)
-#omit il_cmp_d2_2 contains812
+dist.shared(shared=phage_ecol.0.03.il_exp.shared, calc=thetayc-braycurtis, subsample=1293)
+# omit il_cmp_d2_2 contains 812 
+# omit il_cmpphg_d4_3 contains 1292
 
 amova(phylip=phage_ecol.0.03.il_exp.braycurtis.0.03.lt.dist, design=data/references/ileum.design)
 pcoa(phylip=phage_ecol.0.03.il_exp.braycurtis.0.03.lt.dist)
