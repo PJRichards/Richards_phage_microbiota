@@ -1,7 +1,8 @@
 ######################################
 #
 # Figure S7
-# LEfSE Campylobacter-colonized birds
+# Histogram of LEfSE results for
+# Campylobacter-colonized birds
 #
 ######################################
 

@@ -1,7 +1,8 @@
 ############################################################
 #
-# Figure S8. LEfSE analysis for OTUs discriminatory of 
-# *Campylobacter*-colonized and *Campylobacter*-free birds
+# Figure S8. Histogram of LEfSE analysis 
+# for OTUs discriminatory of *Campylobacter*-colonized
+#  and *Campylobacter*-free birds
 #
 ############################################################
 
@@ -27,7 +28,6 @@ tax_table <- separate(tax_table, Taxonomy,
 
 
 ## obscure 'rare.otu's'
-
 
 # all
 lefse.ca.all.tax <- merge(lefse.ca.all, tax_table, by="OTU")
