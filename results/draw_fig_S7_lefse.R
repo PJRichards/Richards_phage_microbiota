@@ -55,15 +55,20 @@ lefse.ca.5dpi.tax.clean$fill <- ifelse(lefse.ca.5dpi.tax.clean$Class=="cmp", "de
 
 
 
-lefse.ca.1dpi.p <- ggplot(lefse.ca.1dpi.tax.clean, aes(x=ID, y=as.numeric(as.character(LDA)), fill=fill)) +
+lefse.ca.1dpi.p <- ggplot(lefse.ca.1dpi.tax.clean, 
+                          aes(x=ID, y=as.numeric(as.character(LDA)), fill=fill)) +
                     geom_bar(stat="identity", position="dodge", colour="black") + 
                     scale_fill_identity(guide="legend", labels="Group Cj_phg") +
-                    theme(panel.background=element_blank(), panel.grid.major.x=element_line("lightgrey", size = 0.25),
-                      legend.text=element_text(size=13),legend.position="right", 
-                      legend.title=element_blank(), axis.line=element_line(colour="black", size=0.7)) +
-                    ylab("LDA") + xlab("OTU / genus") +
-                    scale_y_continuous(breaks = seq(0, 5, 1), limits = c(0,5), expand = c(0,0)) +
-                    coord_flip()
+                    theme(panel.background=element_blank(), 
+                        panel.grid.major.x=element_line("lightgrey", size = 0.25),
+                        legend.text=element_text(size=13),legend.position="right", 
+                        legend.title=element_blank(), 
+                        axis.line=element_line(colour="black", size=0.7)) +
+                        ylab(expression("LDA score (log"[10]*textstyle(")"))) + 
+                        xlab("OTU / genus") +
+                        scale_y_continuous(breaks=seq(0, 5, 1), limits=c(0,5), 
+                                           expand=c(0,0)) +
+                        coord_flip()
 
 #lefse.ca.2dpi.p <- ggplot(lefse.ca.2dpi.tax.clean, aes(x=ID, y=as.numeric(as.character(LDA)), fill=Class)) +
 #  geom_bar(stat="identity", position="dodge", colour="black") + 
@@ -75,41 +80,58 @@ lefse.ca.1dpi.p <- ggplot(lefse.ca.1dpi.tax.clean, aes(x=ID, y=as.numeric(as.cha
 #  scale_y_continuous(breaks = seq(0, 4.5, 1), limits = c(0,4.5), expand = c(0,0)) +
 #  coord_flip()
 
-lefse.ca.3dpi.p <- ggplot(lefse.ca.3dpi.tax.clean, aes(x=ID, y=as.numeric(as.character(LDA)), fill=fill)) +
+lefse.ca.3dpi.p <- ggplot(lefse.ca.3dpi.tax.clean, 
+                          aes(x=ID, y=as.numeric(as.character(LDA)), fill=fill)) +
                     geom_bar(stat="identity", position="dodge", colour="black") + 
                     scale_fill_identity(guide="legend", labels="Group Cj") +
-                    theme(panel.background=element_blank(), panel.grid.major.x=element_line("lightgrey", size = 0.25),
-                      legend.text=element_text(size=13),legend.position="right", 
-                      legend.title=element_blank(), axis.line=element_line(colour="black", size=0.7)) +
-                    ylab("LDA") + xlab("OTU / genus") +
-                    scale_y_continuous(breaks = seq(0, 5, 1), limits = c(0,5), expand = c(0,0)) +
+                    theme(panel.background=element_blank(), 
+                          panel.grid.major.x=element_line("lightgrey", size = 0.25),
+                          legend.text=element_text(size=13),legend.position="right", 
+                          legend.title=element_blank(), 
+                          axis.line=element_line(colour="black", size=0.7)) +
+                          ylab(expression("LDA score (log"[10]*textstyle(")"))) +
+                    xlab("OTU / genus") +
+                    scale_y_continuous(breaks=seq(0, 5, 1), limits=c(0,5), 
+                                       expand=c(0,0)) +
                     coord_flip()
 
-lefse.ca.4dpi.p <- ggplot(lefse.ca.4dpi.tax.clean, aes(x=ID, y=as.numeric(as.character(LDA)), fill=fill)) +
+lefse.ca.4dpi.p <- ggplot(lefse.ca.4dpi.tax.clean, 
+                          aes(x=ID, y=as.numeric(as.character(LDA)), fill=fill)) +
                     geom_bar(stat="identity", position="dodge", colour="black") + 
                     scale_fill_identity(guide="legend", labels="Group Cj") +
-                    theme(panel.background=element_blank(), panel.grid.major.x=element_line("lightgrey", size = 0.25),
-                      legend.text=element_text(size=13),legend.position="right", 
-                      legend.title=element_blank(), axis.line=element_line(colour="black", size=0.7)) +
-                    ylab("LDA") + xlab("OTU / genus") +
-                    scale_y_continuous(breaks = seq(0, 4.5, 1), limits = c(0,4.5), expand = c(0,0)) +
+                    theme(panel.background=element_blank(), 
+                          panel.grid.major.x=element_line("lightgrey", size = 0.25),
+                          legend.text=element_text(size=13),legend.position="right", 
+                          legend.title=element_blank(), 
+                          axis.line=element_line(colour="black", size=0.7)) +
+                    ylab(expression("LDA score (log"[10]*textstyle(")"))) + 
+                    xlab("OTU / genus") +
+                    scale_y_continuous(breaks=seq(0, 4.5, 1), limits=c(0,4.5), 
+                                       expand=c(0,0)) +
                     coord_flip()
 
-lefse.ca.5dpi.p <- ggplot(lefse.ca.5dpi.tax.clean, aes(x=ID, y=as.numeric(as.character(LDA)), fill=fill)) +
+lefse.ca.5dpi.p <- ggplot(lefse.ca.5dpi.tax.clean, 
+                          aes(x=ID, y=as.numeric(as.character(LDA)), fill=fill)) +
                     geom_bar(stat="identity", position="dodge", colour="black") + 
                     scale_fill_identity(guide="legend", labels="Group Cj_phg") +
-                    theme(panel.background=element_blank(), panel.grid.major.x=element_line("lightgrey", size = 0.25),
-                      legend.text=element_text(size=13), legend.position="right",
-                      legend.title=element_blank(), axis.line=element_line(colour="black", size=0.7)) +
-                    ylab("LDA") + xlab("OTU / genus") +
-                    scale_y_continuous(breaks = seq(0, 5, 1), limits = c(0,5), expand = c(0,0)) +
+                    theme(panel.background=element_blank(), 
+                          panel.grid.major.x=element_line("lightgrey", size = 0.25),
+                          legend.text=element_text(size=13), legend.position="right",
+                          legend.title=element_blank(), 
+                          axis.line=element_line(colour="black", size=0.7)) +
+                    ylab(expression("LDA score (log"[10]*textstyle(")"))) +
+                    xlab("OTU / genus") +
+                    scale_y_continuous(breaks=seq(0, 5, 1), limits=c(0,5), 
+                                       expand=c(0,0)) +
                     coord_flip()
 
-tiff(filename="results/figures/figS7_ca_LEfSE.tiff", width=250, height=250, units="mm", res=300)
+tiff(filename="results/figures/figS7_ca_LEfSEfix.tiff", 
+                                width=250, height=250, units="mm", res=300)
 ggdraw() +
   draw_plot(lefse.ca.1dpi.p, x=0.05, y=0.78, width=0.8, height=0.22) +
   draw_plot(lefse.ca.3dpi.p, x=0.05, y=0.55, width=0.8, height=0.22) +
   draw_plot(lefse.ca.4dpi.p, x=0.05, y=0.32, width=0.8, height=0.22) +
   draw_plot(lefse.ca.5dpi.p, x=0.05, y=0, width=0.8, height=0.31) +
-  draw_plot_label(label = c("A", "B", "C", "D"), size = 20, x = c(0, 0, 0, 0), y = c(0.99, 0.77, 0.53, 0.30))
+  draw_plot_label(label=c("A", "B", "C", "D"), size=20, 
+                  x=c(0, 0, 0, 0), y=c(0.99, 0.77, 0.53, 0.30))
 dev.off()
